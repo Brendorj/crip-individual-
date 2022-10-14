@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Decodificação</h1>
+
+    <label for="mensagem1">Digite a Mensagem:</label>
+    <textarea cols="30" rows="3" name="msg1" id="msg1"></textarea>
+
+    <label for="escolhaMetodo">Escolha o Tipo de Criptografia:</label><br>
+    <select name="cifras" id="cifras">
+        <option value="emBranco">Escolha</option>
+        <option value="cesar" id="cCesar">Cifra de César</option>
+        <option value="base" id="b64">Base64</option>
+    </select><br>
+
+    <div class="seletorCesar" style="display: none;">
+        <p>Incremento da Cifra de César - <br>1 a 26</p>
+        <input type="number" name="posiçãoCesar" id="posiçãoCesar" min="1" max="26">
+    </div>
+
+    <div class="radioType">
+        <input type="radio" name="options" value="Criptografar" id="Criptografar">
+        <label for="Criptografar" id="labelCriptografar">Criptografar</label>
+
+
+        <input type="radio" name="options" value="Descriptografar" id="Descriptografar">
+        <label for="Descriptografar" id="labelDescriptografar">Descriptografe</label>
+    </div>
+
+    <div class="botaomsg">
+        <input type="submit" id="submit" value="Criptografar" style="display: flex;">
+        <input type="submit" id="submit" value="Descriptografar" style="display: none;">
+    </div>
+
+    <label for="resultado" id="resultado"> </label>
+    <textarea name="msg2" id="msg2" cols="30" rows="3"></textarea>
+
+
+</body>
+</html>
+<script src="funcao.js"></script>
